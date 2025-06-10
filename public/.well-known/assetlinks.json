@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.feriadoctormora.twa",
+        "sha256_cert_fingerprints": ["E0:0F:1C:D2:42:CF:FC:EC:6B:5E:75:66:77:DB:CE:44:A7:DA:95:9C:51:88:74:7B:B7:33:D4:50:7C:82:C3:8E"]
+      }
+    }]
