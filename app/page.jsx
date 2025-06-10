@@ -22,7 +22,7 @@ export default function Home() {
                   alt={evento.artista}
                   width={200}
                   height={200}
-                  className="rounded-lg shadow-lg object-cover size-[100px]"
+                  className="rounded-lg shadow-lg object-cover size-[100px] md:size-[150px]"
                 />
               </div>
               <div className="flex flex-col">

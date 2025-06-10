@@ -29,7 +29,7 @@ export const eventos = [
     id: "22-jun-vagon-chicano",
     fecha: "Domingo 22 de junio",
     artista: "Vagón Chicano",
-    precio: "100 pesos",
+    precio: "100 pesos general",
     imagen: vagon 
   },
   {
@@ -51,7 +51,7 @@ export const eventos = [
     id: "25-jun-kumbre-con-k",
     fecha: "Miércoles 25 de junio",
     artista: "Kumbre con K",
-    precio: "100 pesos",
+    precio: "100 pesos general",
     imagen: kumbre
   },
   {
@@ -79,7 +79,7 @@ export const eventos = [
     id: "29-jun-poder-del-norte",
     fecha: "Domingo 29 de junio",
     artista: "Poder del Norte de Martín Buenrostro",
-    precio: "100 pesos",
+    precio: "100 pesos general",
     imagen: poder
   },
 ];

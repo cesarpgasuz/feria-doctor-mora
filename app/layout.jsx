@@ -9,7 +9,12 @@ export const metadata = {
   title: "Feria Doctor Mora 2025",
   keywords: ["Feria Doctor Mora", "Eventos 2025", "Música en vivo", "Cultura"],
   description: "Descubre los eventos de la Feria Doctor Mora 2025, con una variedad de artistas y actividades culturales del 20 al 29 de junio.",
+  manifest: "/manifest.json",
 };
+
+export const viewport = {
+  themeColor: "#1ac2d8"
+}
 
 export default function RootLayout({ children }) {
   return (
