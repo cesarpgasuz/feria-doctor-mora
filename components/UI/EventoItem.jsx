@@ -16,27 +16,8 @@ const EventoItem = ({ evento }) => {
         return new Date(anio, mes - 1, dia, 23, 59, 0); // Los meses en JavaScript son 0-indexados}
     }
 
-
-    function mostrarHoraActual() {
-        const ahora = new Date();
-        let horas = ahora.getHours();
-        let minutos = ahora.getMinutes();
-
-        // Asegurarse de que los minutos tengan dos dígitos (ej. 05 en lugar de 5)
-        minutos = minutos < 10 ? '0' + minutos : minutos;
-
-        // Formato de 12 horas con AM/PM
-        const ampm = horas >= 12 ? 'PM' : 'AM';
-        horas = horas % 12;
-        horas = horas ? horas : 12; // La hora '0' debe ser '12'
-
-        const horaFormateada = `${horas}:${minutos} ${ampm}`;
-        return horaFormateada;
-    }
-
-    // Para usarla, simplemente llama a la función:
-    console.log(mostrarHoraActual()); // Esto imprimirá la hora actual en la consola
-
+    const fechaEvento = convertirFecha(fecha);
+    const esEventoPasado = fechaEvento < fechaActual;
 
     return (
         <div key={id} className={` mb-8 py-8 flex gap-4`}>
@@ -46,10 +27,10 @@ const EventoItem = ({ evento }) => {
                     alt={artista}
                     width={200}
                     height={200}
-                    className={`${convertirFecha(fecha) < fechaActual ? 'grayscale' : ''} rounded-lg shadow-lg object-cover size-[100px] md:size-[150px]`}
+                    className={`${esEventoPasado ? 'grayscale' : ''} rounded-lg shadow-lg object-cover size-[100px] md:size-[150px]`}
                 />
             </div>
-            <div className={`${convertirFecha(fecha) < fechaActual ? 'opacity-30 line-through' : ''} flex flex-col`}>
+            <div className={`${esEventoPasado ? 'opacity-30 line-through' : ''} flex flex-col`}>
                 <h2 className="text-base">{formatearFecha(fecha)}</h2>
                 <p className="text-lg font-bold text-slate-900 md:text-4xl md:italic">{artista}</p>
                 <p className="text-sm text-slate-800 mt-auto">Precio: <strong>{precio}</strong></p>
