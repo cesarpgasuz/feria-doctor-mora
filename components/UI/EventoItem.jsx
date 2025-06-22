@@ -17,6 +17,7 @@ const EventoItem = ({ evento }) => {
         setEsEventoPasado(fechaCalculada < new Date());
     }, [fecha]);
 
+
     return (
         <div key={id} className="mb-8 py-8 flex gap-4">
             <div className="flex-shrink-0">
