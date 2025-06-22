@@ -13,7 +13,7 @@ const EventoItem = ({ evento }) => {
     function convertirFecha(fecha) {
         const [mes, dia, anioCorto] = fecha.split('/').map(Number);
         const anio = anioCorto < 100 ? 2000 + anioCorto : anioCorto; // Asegura que el año sea de 4 dígitos
-        return new Date(anio, mes - 1, dia, 19, 59, 0); // Los meses en JavaScript son 0-indexados}
+        return new Date(anio, mes - 1, dia, 14, 59, 0); // Los meses en JavaScript son 0-indexados}
     }
 
     const fechaEvento = convertirFecha(fecha);
