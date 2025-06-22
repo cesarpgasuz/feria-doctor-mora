@@ -1,22 +1,22 @@
 'use client';
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import { formatearFecha } from "@/utilities";
 
-
-
 const EventoItem = ({ evento }) => {
-
     const { artista, fecha, precio, imagen, id } = evento;
+    const [esEventoPasado, setEsEventoPasado] = useState(false);
 
-    function convertirFecha(fecha) {
-        const [mes, dia, anio] = fecha.split('/').map(Number);
-        return new Date(anio, mes - 1, dia, 23, 59, 0);
-    }
+    useEffect(() => {
+        function convertirFecha(fecha) {
+            const [mes, dia, anio] = fecha.split('/').map(Number);
+            return new Date(anio, mes - 1, dia, 23, 59, 0);
+        }
+        
+        const fechaCalculada = convertirFecha(fecha);
+        setEsEventoPasado(fechaCalculada < new Date());
+    }, [fecha]);
 
-    const fechaEvento = convertirFecha(fecha);
-    const fechaActual = new Date();
-
-    const esEventoPasado = fechaEvento < fechaActual;
 
     return (
         <div key={id} className="mb-8 py-8 flex gap-4">
@@ -35,9 +35,8 @@ const EventoItem = ({ evento }) => {
                 <p className="text-sm text-slate-800 mt-auto">Precio: <strong>{precio}</strong></p>
                 {/* <Reproductor spotify={evento.spotify} /> */}
             </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default EventoItem
+export default EventoItem;
