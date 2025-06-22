@@ -8,27 +8,18 @@ const EventoItem = ({ evento }) => {
 
     const { artista, fecha, precio, imagen, id } = evento;
 
-    // 👉 Convierte fecha del evento al final del día
     function convertirFecha(fecha) {
-        const [mes, dia, anioCorto] = fecha.split('/').map(Number);
-        const anio = anioCorto < 100 ? 2000 + anioCorto : anioCorto;
-        return new Date(anio, mes - 1, dia); // Ya no asignamos hora, usamos 00:00:00
+        const [mes, dia, anio] = fecha.split('/').map(Number);
+        return new Date(anio, mes - 1, dia, 23, 59, 0);
     }
 
-    // 👉 Normaliza fecha para comparar sin horas (sólo año, mes, día)
-    function normalizarFechaSinHora(date) {
-        const nueva = new Date(date);
-        nueva.setHours(0, 0, 0, 0);
-        return nueva;
-    }
-
-    const fechaEvento = normalizarFechaSinHora(convertirFecha(fecha));
-    const fechaActual = normalizarFechaSinHora(new Date());
+    const fechaEvento = convertirFecha(fecha);
+    const fechaActual = new Date();
 
     const esEventoPasado = fechaEvento < fechaActual;
 
     return (
-        <div key={id} className={` mb-8 py-8 flex gap-4`}>
+        <div key={id} className="mb-8 py-8 flex gap-4">
             <div className="flex-shrink-0">
                 <Image
                     src={imagen}
