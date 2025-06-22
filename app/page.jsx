@@ -1,5 +1,4 @@
 // import Reproductor from "@/components/Reproductor";
-
 import { eventos } from "@/data";
 import EventoItem from "@/components/UI/EventoItem";
 
