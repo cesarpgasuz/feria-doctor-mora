@@ -13,35 +13,35 @@ import vagon from '../public/images/vagon.webp';
 export const eventos = [
   {
     id: "20-jun-inquietos",
-    fecha: "Viernes 20 de junio",
+    fecha: "06/20/2025",
     artista: "Los Inquietos del Norte",
     precio: "150 pesos general",
-    imagen: inquietos 
+    imagen: inquietos
   },
   {
     id: "21-jun-bronco",
-    fecha: "Sábado 21 de junio",
+    fecha: "06/21/2025",
     artista: "Bronco",
     precio: "150 pesos general",
-    imagen: bronco 
+    imagen: bronco
   },
   {
     id: "22-jun-vagon-chicano",
-    fecha: "Domingo 22 de junio",
+    fecha: "06/22/2025",
     artista: "Vagón Chicano",
     precio: "100 pesos general",
-    imagen: vagon 
+    imagen: vagon
   },
   {
     id: "23-jun-cmll",
-    fecha: "Lunes 23 de junio",
+    fecha: "06/23/2025",
     artista: "Consejo Mundial de Lucha Libre (CMLL)",
     precio: "100 pesos adultos, acceso gratuito para niños",
     imagen: cmll
   },
   {
     id: "24-jun-guerra-chistes",
-    fecha: "Martes 24 de junio",
+    fecha: "06/24/2025",
     artista: "Guerra de Chistes",
     precio: "100 pesos adultos, acceso gratuito para niños",
     imagen: guerra
@@ -49,35 +49,35 @@ export const eventos = [
   },
   {
     id: "25-jun-kumbre-con-k",
-    fecha: "Miércoles 25 de junio",
+    fecha: "06/25/2025",
     artista: "Kumbre con K",
     precio: "100 pesos general",
     imagen: kumbre
   },
   {
     id: "26-jun-patrulla-81",
-    fecha: "Jueves 26 de junio",
+    fecha: "06/26/2025",
     artista: "Patrulla 81 de José Ángel Medina",
     precio: "100 pesos general",
-    imagen: patrulla 
+    imagen: patrulla
   },
   {
     id: "27-luis-r-conriquez",
-    fecha: "Viernes 27 de junio",
+    fecha: "06/27/2025",
     artista: "Luis R. Conriquez",
     precio: "150 pesos general",
     imagen: luis
   },
   {
     id: "28-jun-los-farmerz",
-    fecha: "Sábado 28 de junio",
+    fecha: "06/28/2025",
     artista: "Los Farmerz",
     precio: "150 pesos general",
     imagen: farmerz
   },
   {
     id: "29-jun-poder-del-norte",
-    fecha: "Domingo 29 de junio",
+    fecha: "06/29/2025",
     artista: "Poder del Norte de Martín Buenrostro",
     precio: "100 pesos general",
     imagen: poder
